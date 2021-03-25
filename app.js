@@ -27,7 +27,7 @@ app.use(express.static('client/build'));
 app.use("/api", todoRoutes)
 
 //Port
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 
 

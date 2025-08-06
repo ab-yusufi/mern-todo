@@ -4,8 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app",
-    "heroku-postbuild": "cd client && npm install --only-dev && npm install && npm run build"
+ "start": "node index.js",
+    "dev": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only-dev && npm install && npm run build",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm audit fix --force && npm install --prefix client && npm run build --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client"
   },
   "keywords": [],
   "author": "",
